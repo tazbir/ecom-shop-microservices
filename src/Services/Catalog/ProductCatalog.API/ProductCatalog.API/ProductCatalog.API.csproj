@@ -8,13 +8,13 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <Content Include="..\..\..\.dockerignore">
+      <Content Include="..\..\..\..\.dockerignore">
         <Link>.dockerignore</Link>
       </Content>
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\..\..\Shared\Base\Base.csproj" />
+      <ProjectReference Include="..\..\..\..\Shared\Base\Base.csproj" />
     </ItemGroup>
 
 </Project>
