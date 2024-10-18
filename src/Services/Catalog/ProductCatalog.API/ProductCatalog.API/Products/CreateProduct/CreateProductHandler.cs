@@ -8,7 +8,7 @@ public record CreateProductCommand(string Name, string Description, List<string>
 
 public record CreateProductResult(Guid Id);
 
-public class CreateProductHandler: ICommandHandler<CreateProductCommand, CreateProductResult>
+internal class CreateProductHandler(IDocumentSession session): ICommandHandler<CreateProductCommand, CreateProductResult>
 {
     public async Task<CreateProductResult> Handle(CreateProductCommand command, CancellationToken cancellationToken)
     {
@@ -22,8 +22,9 @@ public class CreateProductHandler: ICommandHandler<CreateProductCommand, CreateP
             Category = command.Category
         };
         
-        //TODO: Save product to database
+        session.Store(product);
+        await session.SaveChangesAsync(cancellationToken);
         
-        return new CreateProductResult(Guid.NewGuid());
+        return new CreateProductResult(product.Id);
     }
 }
