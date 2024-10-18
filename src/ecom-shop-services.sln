@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{08A810D3-0887-44AB-B950-B71AF3496815}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Catalog", "Catalog", "{DEB91EA0-BEFB-490D-A8E0-77817AF04F0E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{07957D5F-3565-4011-A661-D9081A16A6F3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Base", "Shared\Base\Base.csproj", "{2634DC53-7FD4-48E2-8918-C79CDB105545}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProductCatalog.API", "Services\Catalog\ProductCatalog.API\ProductCatalog.API\ProductCatalog.API.csproj", "{C386CEEA-40ED-42D3-92EE-3E5A6B522BD9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{DEB91EA0-BEFB-490D-A8E0-77817AF04F0E} = {08A810D3-0887-44AB-B950-B71AF3496815}
+		{2634DC53-7FD4-48E2-8918-C79CDB105545} = {07957D5F-3565-4011-A661-D9081A16A6F3}
+		{C386CEEA-40ED-42D3-92EE-3E5A6B522BD9} = {DEB91EA0-BEFB-490D-A8E0-77817AF04F0E}
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2634DC53-7FD4-48E2-8918-C79CDB105545}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2634DC53-7FD4-48E2-8918-C79CDB105545}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2634DC53-7FD4-48E2-8918-C79CDB105545}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2634DC53-7FD4-48E2-8918-C79CDB105545}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C386CEEA-40ED-42D3-92EE-3E5A6B522BD9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C386CEEA-40ED-42D3-92EE-3E5A6B522BD9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C386CEEA-40ED-42D3-92EE-3E5A6B522BD9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C386CEEA-40ED-42D3-92EE-3E5A6B522BD9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
