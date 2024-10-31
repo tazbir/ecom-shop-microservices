@@ -1,4 +1,13 @@
 
+using System;
+using System.Collections.Generic;
+using Carter;
+using Mapster;
+using MediatR;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Routing;
+
 namespace ProductCatalog.API.Products.CreateProduct;
 
 public record CreateProductRequest(string Name, string Description, List<string> Category, decimal Price, string ImageFile);
@@ -20,8 +29,6 @@ public class CreateProductEndpoint: ICarterModule
             .Produces<CreateProductResponse>(201)
             .WithName("CreateProduct")
             .ProducesProblem(StatusCodes.Status400BadRequest)
-            .ProducesProblem(StatusCodes.Status500InternalServerError)
-            .ProducesProblem(StatusCodes.Status503ServiceUnavailable)
             .WithSummary("Create a new product")
             .WithDescription("Create a new product in the catalog");
     }
